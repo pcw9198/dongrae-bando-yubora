@@ -82,16 +82,16 @@ export default function HomePage() {
           <div className="flex items-center space-x-4">
             <button 
               className="hidden sm:flex items-center space-x-2 text-accent hover:text-accent/80 transition-colors cursor-pointer"
-              onClick={() => window.open("tel:051-997-1026")}
+              onClick={() => window.open("tel:010-8979-9198")}
             >
               <Phone className="h-4 w-4" />
-              <span className="font-semibold">051-997-1026</span>
+              <span className="font-semibold">010-8979-9198</span>
             </button>
             <Button
               variant="secondary"
               size="sm"
               className="bg-accent text-accent-foreground hover:bg-accent/90"
-              onClick={() => window.open("tel:051-997-1026")}
+              onClick={() => window.open("tel:010-8979-9198")}
             >
               <Phone className="h-4 w-4 mr-2" />
               전화상담
@@ -129,7 +129,7 @@ export default function HomePage() {
               size="lg"
               variant="outline"
               className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-lg px-8 py-4 bg-transparent"
-              onClick={() => window.open("tel:051-997-1026")}
+              onClick={() => window.open("tel:010-8979-9198")}
             >
               <Phone className="h-5 w-5 mr-2" />
               전화 상담 연결
@@ -587,10 +587,10 @@ export default function HomePage() {
                   <p className="text-primary-foreground/80 mb-4">즉시 전문 상담사와 연결</p>
                   <Button
                     className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
-                    onClick={() => window.open("tel:051-997-1026")}
+                    onClick={() => window.open("tel:010-8979-9198")}
                   >
                     <Phone className="h-4 w-4 mr-2" />
-                    051-997-1026
+                    010-8979-9198
                   </Button>
                 </CardContent>
               </Card>
@@ -650,7 +650,7 @@ export default function HomePage() {
               <div className="space-y-2 text-sm text-muted-foreground">
                 <div className="flex items-center">
                   <Phone className="h-4 w-4 mr-2" />
-                  <span>051-997-1026</span>
+                  <span>010-8979-9198</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 mr-2" />
