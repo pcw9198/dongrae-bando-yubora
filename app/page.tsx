@@ -207,11 +207,7 @@ export default function HomePage() {
                     <div className="text-base font-semibold">9,906.40㎡</div>
                   </div>
                 </div>
-                <div className="text-center">
-                  <Button size="sm" className="mt-2" onClick={() => setIsOverviewOpen((v) => !v)}>
-                    세부 정보 보기
-                  </Button>
-                </div>
+                {/* 세부 정보 보기 버튼 제거 */}
               </>
             )}
           </div>
@@ -584,11 +580,7 @@ export default function HomePage() {
                     <div className="text-sm font-semibold">개발 비전</div>
                   </div>
                 </div>
-                <div className="text-center">
-                  <Button size="sm" className="mt-2" onClick={() => setIsLocationOpen((v) => !v)}>
-                    세부 정보 보기
-                  </Button>
-                </div>
+                {/* 세부 정보 보기 버튼 제거 */}
               </>
             )}
           </div>
