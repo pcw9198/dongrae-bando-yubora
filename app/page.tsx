@@ -113,7 +113,8 @@ export default function HomePage() {
           <Badge className="mb-4 bg-accent text-accent-foreground text-lg px-4 py-2">프리미엄 분양</Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">동래 반도 유보라</h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            부산광역시 동래구 낙민동에 위치한 프리미엄 아파트 단지로, 최고의 입지와 품질을 자랑합니다.
+            부산광역시 동래구 낙민동에 위치한 프리미엄 아파트 단지로<br />
+            최고의 입지와 품질을 자랑합니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
