@@ -25,6 +25,8 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [currentImageIndexB, setCurrentImageIndexB] = useState(0)
   const [isModalOpenB, setIsModalOpenB] = useState(false)
+  const [isOverviewOpen, setIsOverviewOpen] = useState(false)
+  const FEATURE_MOBILE_CAROUSEL = process.env.NEXT_PUBLIC_FEATURE_MOBILE_CAROUSEL === "true"
 
   const unitAImages = [
     { src: "/84a-living-room.png", title: "거실", description: "넓고 밝은 거실 공간" },
@@ -148,7 +150,73 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="md:hidden space-y-4 mb-8">
+            {FEATURE_MOBILE_CAROUSEL ? (
+              <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-4 px-4">
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">총 세대수</div>
+                  <div className="text-lg font-bold">400세대</div>
+                </div>
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">세대 타입</div>
+                  <div className="text-lg font-bold">84㎡A,B,C</div>
+                </div>
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">주차 대수</div>
+                  <div className="text-lg font-bold">498대</div>
+                </div>
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">입주 예정</div>
+                  <div className="text-lg font-bold">2026년 11월 예정</div>
+                </div>
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">건축규모</div>
+                  <div className="text-lg font-bold">지하3층~지상42층</div>
+                </div>
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">대지면적</div>
+                  <div className="text-lg font-bold">9,906.40㎡</div>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">총 세대수</div>
+                    <div className="text-base font-semibold">400세대</div>
+                  </div>
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">세대 타입</div>
+                    <div className="text-base font-semibold">84㎡A,B,C</div>
+                  </div>
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">주차 대수</div>
+                    <div className="text-base font-semibold">498대</div>
+                  </div>
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">입주 예정</div>
+                    <div className="text-base font-semibold">2026년 11월 예정</div>
+                  </div>
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">건축규모</div>
+                    <div className="text-base font-semibold">지하3층~지상42층</div>
+                  </div>
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">대지면적</div>
+                    <div className="text-base font-semibold">9,906.40㎡</div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <Button size="sm" className="mt-2" onClick={() => setIsOverviewOpen((v) => !v)}>
+                    세부 정보 보기
+                  </Button>
+                </div>
+              </>
+            )}
+          </div>
+
+          <div className={`mb-12 ${isOverviewOpen ? "block" : "hidden"} md:block`}>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="text-center p-6">
               <CardContent className="pt-6">
                 <Building2 className="h-12 w-12 text-accent mx-auto mb-4" />
@@ -191,6 +259,7 @@ export default function HomePage() {
                 <p className="text-2xl font-bold text-primary">9,906.40㎡</p>
               </CardContent>
             </Card>
+            </div>
           </div>
 
           <Card className="p-8 bg-card">
@@ -256,8 +325,8 @@ export default function HomePage() {
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex-1"></div>
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold mb-2">84㎡A</h3>
-                  <p className="text-muted-foreground mb-4">신혼부부 및 소가족을 위한 최적의 공간 설계</p>
+                <h3 className="text-xl font-bold mb-2">84㎡A</h3>
+                <p className="text-muted-foreground mb-4">신혼부부 및 소가족을 위한 최적의 공간 설계</p>
                 </div>
                 <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
                   <DialogTrigger asChild>
@@ -340,8 +409,8 @@ export default function HomePage() {
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex-1"></div>
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold mb-2">84㎡B</h3>
-                  <p className="text-muted-foreground mb-4">효율적인 공간 활용과 채광을 고려한 설계</p>
+                <h3 className="text-xl font-bold mb-2">84㎡B</h3>
+                <p className="text-muted-foreground mb-4">효율적인 공간 활용과 채광을 고려한 설계</p>
                 </div>
                 <Dialog open={isModalOpenB} onOpenChange={setIsModalOpenB}>
                   <DialogTrigger asChild>
@@ -425,8 +494,8 @@ export default function HomePage() {
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex-1"></div>
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold mb-2">84㎡C</h3>
-                  <p className="text-muted-foreground mb-4">프리미엄 마감재와 특화 설계가 적용된 타입</p>
+                <h3 className="text-xl font-bold mb-2">84㎡C</h3>
+                <p className="text-muted-foreground mb-4">프리미엄 마감재와 특화 설계가 적용된 타입</p>
                 </div>
                 <Dialog>
                   <DialogTrigger asChild>
@@ -435,8 +504,8 @@ export default function HomePage() {
                       size="sm"
                       className="w-full bg-transparent hover:bg-accent hover:text-accent-foreground"
                     >
-                      상세보기
-                    </Button>
+                  상세보기
+                </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl w-full h-[80vh] p-0">
                     <DialogHeader className="p-6 pb-0">
@@ -487,7 +556,7 @@ export default function HomePage() {
                         <li>• 지하철 4호선 낙민역 도보 약7분</li>
                         <li>• 지하철 동해선 동래역 도보 약3분</li>
                         <li>• 만덕-센텀 대심도 26년 개통예정</li>
-                      </ul>
+                    </ul>
                     </div>
                   </CardContent>
                 </Card>
@@ -502,7 +571,7 @@ export default function HomePage() {
                         <li>• 낙민초 도보 5분</li>
                         <li>• 동래고 도보 12분</li>
                         <li>• 동래구 교육 문화특구 지정</li>
-                      </ul>
+                    </ul>
                     </div>
                   </CardContent>
                 </Card>
@@ -517,7 +586,7 @@ export default function HomePage() {
                         <li>• 온천천 수변공원 도보 3분</li>
                         <li>• 수민어울공원 도보 3분</li>
                         <li>• 어린이 복합문화공간 들락날락 도보3분</li>
-                      </ul>
+                    </ul>
                     </div>
                   </CardContent>
                 </Card>
@@ -532,7 +601,7 @@ export default function HomePage() {
                         <li>• 사업지 인근 총 9,211세대 재건축과 정비사업 등 다양한 개발호재</li>
                         <li>• 동래구 임시청사 부지에 건립되는 생활복합센터(27년 예정)</li>
                         <li>• 수민어울공원 2단계 체육센터 조성(29년 예정)</li>
-                      </ul>
+                    </ul>
                     </div>
                   </CardContent>
                 </Card>
