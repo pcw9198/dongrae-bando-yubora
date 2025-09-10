@@ -113,7 +113,7 @@ export default function HomePage() {
           <Badge className="mb-4 bg-accent text-accent-foreground text-lg px-4 py-2">프리미엄 분양</Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">동래 반도 유보라</h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            부산광역시 동래구 낙민동에 위치한 프리미엄 아파트 단지로<br />
+            <br />
             최고의 입지와 품질을 자랑합니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -144,7 +144,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">단지 개요</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              부산광역시 동래구 낙민동에 위치한 프리미엄 아파트 단지로, 최고의 교통 접근성과 생활 편의시설을 자랑합니다.
+              , 최고의 교통 접근성과 생활 편의시설을 자랑합니다.
             </p>
           </div>
 
@@ -480,11 +480,15 @@ export default function HomePage() {
                   <CardContent className="pt-6">
                     <Car className="h-8 w-8 text-accent mb-4" />
                     <h3 className="font-semibold mb-2">교통</h3>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• 지하철 1호선 동래역 도보 5분</li>
-                      <li>• 부산 시내 접근 15분</li>
-                      <li>• 고속도로 진입 10분</li>
-                    </ul>
+                    <div className="text-sm text-muted-foreground space-y-2">
+                      <div className="font-semibold text-accent mb-2">지하철 1·4호선, 동해선 트리플 역세권</div>
+                      <ul className="space-y-1">
+                        <li>• 지하철 1호선 교대역 도보 약17분</li>
+                        <li>• 지하철 4호선 낙민역 도보 약7분</li>
+                        <li>• 지하철 동해선 동래역 도보 약3분</li>
+                        <li>• 만덕-센텀 대심도 26년 개통예정</li>
+                      </ul>
+                    </div>
                   </CardContent>
                 </Card>
 
