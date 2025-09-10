@@ -80,10 +80,13 @@ export default function HomePage() {
             </a>
           </nav>
           <div className="flex items-center space-x-4">
-            <div className="hidden sm:flex items-center space-x-2 text-accent">
+            <button 
+              className="hidden sm:flex items-center space-x-2 text-accent hover:text-accent/80 transition-colors cursor-pointer"
+              onClick={() => window.open("tel:051-997-1026")}
+            >
               <Phone className="h-4 w-4" />
               <span className="font-semibold">051-997-1026</span>
-            </div>
+            </button>
             <Button
               variant="secondary"
               size="sm"
