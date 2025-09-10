@@ -27,6 +27,7 @@ export default function HomePage() {
   const [isModalOpenB, setIsModalOpenB] = useState(false)
   const [isOverviewOpen, setIsOverviewOpen] = useState(false)
   const FEATURE_MOBILE_CAROUSEL = process.env.NEXT_PUBLIC_FEATURE_MOBILE_CAROUSEL === "true"
+  const [isLocationOpen, setIsLocationOpen] = useState(false)
 
   const unitAImages = [
     { src: "/84a-living-room.png", title: "거실", description: "넓고 밝은 거실 공간" },
@@ -542,7 +543,57 @@ export default function HomePage() {
             <p className="text-lg text-muted-foreground">동래구 중심가의 최적 입지 조건</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Mobile summary for location cards */}
+          <div className="md:hidden space-y-4 mb-8">
+            {FEATURE_MOBILE_CAROUSEL ? (
+              <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory -mx-4 px-4">
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">교통</div>
+                  <div className="text-sm font-semibold">트리플 역세권/대심도(예정)</div>
+                </div>
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">교육</div>
+                  <div className="text-sm font-semibold">초·고 근거리 도보권</div>
+                </div>
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">편의</div>
+                  <div className="text-sm font-semibold">온천천·수민어울공원</div>
+                </div>
+                <div className="snap-center shrink-0 min-w-[78%] rounded-xl border bg-card p-4">
+                  <div className="text-xs text-muted-foreground">비전</div>
+                  <div className="text-sm font-semibold">대규모 개발 호재</div>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">교통</div>
+                    <div className="text-sm font-semibold">트리플 역세권</div>
+                  </div>
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">교육</div>
+                    <div className="text-sm font-semibold">초·고 도보권</div>
+                  </div>
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">편의</div>
+                    <div className="text-sm font-semibold">온천천·공원</div>
+                  </div>
+                  <div className="rounded-lg border bg-card p-3 text-center">
+                    <div className="text-xs text-muted-foreground">비전</div>
+                    <div className="text-sm font-semibold">개발 비전</div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <Button size="sm" className="mt-2" onClick={() => setIsLocationOpen((v) => !v)}>
+                    세부 정보 보기
+                  </Button>
+                </div>
+              </>
+            )}
+          </div>
+
+          <div className={`grid lg:grid-cols-2 gap-12 items-center ${isLocationOpen ? "grid" : "hidden md:grid"}`}> 
             <div>
               <div className="grid sm:grid-cols-2 gap-6">
                 <Card className="p-6">
