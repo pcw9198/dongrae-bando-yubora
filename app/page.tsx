@@ -526,7 +526,7 @@ export default function HomePage() {
               <img
                 src="/dongrae-location-updated-map.png"
                 alt="동래구 위치도"
-                className="w-full h-80 object-cover rounded-lg mb-4"
+                className="w-full h-80 object-contain rounded-lg mb-4"
               />
               <div className="text-center">
                 <h3 className="font-semibold mb-2">동래구 중심가 프리미엄 입지</h3>
