@@ -479,7 +479,7 @@ export default function HomePage() {
                 <Card className="p-6">
                   <CardContent className="pt-6">
                     <Car className="h-8 w-8 text-accent mb-4" />
-                    <h3 className="font-semibold mb-2">교통</h3>
+                    <h3 className="font-semibold mb-2">교통 환경</h3>
                     <div className="text-sm text-muted-foreground space-y-2">
                       <div className="font-semibold text-accent mb-2">지하철 1·4호선, 동해선 트리플 역세권</div>
                       <ul className="space-y-1">
@@ -495,36 +495,45 @@ export default function HomePage() {
                 <Card className="p-6">
                   <CardContent className="pt-6">
                     <GraduationCap className="h-8 w-8 text-accent mb-4" />
-                    <h3 className="font-semibold mb-2">교육</h3>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• 동래초등학교 도보 3분</li>
-                      <li>• 동래중학교 도보 7분</li>
-                      <li>• 동래고등학교 도보 10분</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="p-6">
-                  <CardContent className="pt-6">
-                    <ShoppingBag className="h-8 w-8 text-accent mb-4" />
-                    <h3 className="font-semibold mb-2">쇼핑</h3>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• 롯데백화점 동래점 5분</li>
-                      <li>• 동래시장 도보 8분</li>
-                      <li>• 이마트 동래점 차량 3분</li>
-                    </ul>
+                    <h3 className="font-semibold mb-2">교육 환경</h3>
+                    <div className="text-sm text-muted-foreground space-y-2">
+                      <div className="font-semibold text-accent mb-2">단지 앞 초,고교 근거리 도보권 위치</div>
+                      <ul className="space-y-1">
+                        <li>• 낙민초 도보 5분</li>
+                        <li>• 동래고 도보 12분</li>
+                        <li>• 동래구 교육 문화특구 지정</li>
+                      </ul>
+                    </div>
                   </CardContent>
                 </Card>
 
                 <Card className="p-6">
                   <CardContent className="pt-6">
                     <MapPin className="h-8 w-8 text-accent mb-4" />
-                    <h3 className="font-semibold mb-2">문화/여가</h3>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• 동래온천 도보 10분</li>
-                      <li>• 금강공원 차량 5분</li>
-                      <li>• 동래문화회관 도보 12분</li>
-                    </ul>
+                    <h3 className="font-semibold mb-2">편의 환경</h3>
+                    <div className="text-sm text-muted-foreground space-y-2">
+                      <div className="font-semibold text-accent mb-2">온천천, 수민어울공원 힐링 라이프</div>
+                      <ul className="space-y-1">
+                        <li>• 온천천 수변공원 도보 3분</li>
+                        <li>• 수민어울공원 도보 3분</li>
+                        <li>• 어린이 복합문화공간 들락날락 도보3분</li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="p-6">
+                  <CardContent className="pt-6">
+                    <Building2 className="h-8 w-8 text-accent mb-4" />
+                    <h3 className="font-semibold mb-2">미래 가치</h3>
+                    <div className="text-sm text-muted-foreground space-y-2">
+                      <div className="font-semibold text-accent mb-2">대규모 개발 비전의 중심</div>
+                      <ul className="space-y-1">
+                        <li>• 사업지 인근 총 9,211세대 재건축과 정비사업 등 다양한 개발호재</li>
+                        <li>• 동래구 임시청사 부지에 건립되는 생활복합센터(27년 예정)</li>
+                        <li>• 수민어울공원 2단계 체육센터 조성(29년 예정)</li>
+                      </ul>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
