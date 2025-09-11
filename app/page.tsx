@@ -130,8 +130,7 @@ export default function HomePage() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-lg px-8 py-4 bg-transparent"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 py-4"
               onClick={() => window.open("tel:010-8979-9198")}
             >
               <Phone className="h-5 w-5 mr-2" />
@@ -700,11 +699,11 @@ export default function HomePage() {
             <p className="text-lg mb-8 opacity-90">전문 상담사가 자세한 분양 정보와 혜택을 안내해드립니다</p>
 
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
-              <Card className="bg-card/10 border-accent/30 text-center p-6">
+              <Card className="bg-card text-card-foreground border border-border text-center p-6">
                 <CardContent className="pt-6">
                   <Phone className="h-12 w-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2 text-primary-foreground">전화 상담</h3>
-                  <p className="text-primary-foreground/80 mb-4">즉시 전문 상담사와 연결</p>
+                  <h3 className="text-xl font-semibold mb-2">전화 상담</h3>
+                  <p className="text-muted-foreground mb-4">즉시 전문 상담사와 연결</p>
                   <Button
                     className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
                     onClick={() => window.open("tel:010-8979-9198")}
@@ -715,11 +714,11 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-card/10 border-accent/30 text-center p-6">
+              <Card className="bg-card text-card-foreground border border-border text-center p-6">
                 <CardContent className="pt-6">
                   <Calendar className="h-12 w-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2 text-primary-foreground">방문 상담</h3>
-                  <p className="text-primary-foreground/80 mb-4">모델하우스 견학 및 상담</p>
+                  <h3 className="text-xl font-semibold mb-2">방문 상담</h3>
+                  <p className="text-muted-foreground mb-4">모델하우스 견학 및 상담</p>
                   <Button
                     className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
                     onClick={() => window.open("https://naver.me/xWzI9WyE", "_blank")}
