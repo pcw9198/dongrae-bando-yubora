@@ -4,7 +4,6 @@ import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Script from 'next/script'
-import PromoPopup from './_components/PromoPopup'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -41,7 +40,6 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-        <PromoPopup />
       </body>
     </html>
   )
