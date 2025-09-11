@@ -84,7 +84,7 @@ export default function HomePage() {
           </nav>
           <div className="flex items-center space-x-4">
             <button 
-              className="hidden sm:flex items-center space-x-2 text-accent hover:text-accent/80 transition-colors cursor-pointer"
+              className="hidden sm:flex items-center space-x-2 bg-accent text-accent-foreground hover:bg-accent/90 transition-colors cursor-pointer rounded-md px-3 py-1.5"
               onClick={() => window.open("tel:010-8979-9198")}
             >
               <Phone className="h-4 w-4" />
