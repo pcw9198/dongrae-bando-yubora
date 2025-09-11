@@ -77,11 +77,14 @@ const styles: Record<string, React.CSSProperties> = {
     borderRadius: 16,
     overflow: 'hidden',
     boxShadow: '0 12px 30px rgba(0,0,0,.18)',
+    background: '#ffffff',
   },
   img: {
     display: 'block',
     width: 'min(88vw, 320px)',
     height: 'auto',
+    opacity: 1,
+    filter: 'none',
   },
   controls: {
     display: 'flex',
