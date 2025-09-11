@@ -207,7 +207,11 @@ export default function HomePage() {
                     <div className="text-base font-semibold">9,906.40㎡</div>
                   </div>
                 </div>
-                {/* 단지 개요 섹션: 요청에 따라 모바일 토글 버튼 제거 */}
+                <div className="text-center">
+                  <Button size="sm" className="mt-2" onClick={() => setIsOverviewOpen((v) => !v)}>
+                    세부 정보 보기
+                  </Button>
+                </div>
               </>
             )}
           </div>
