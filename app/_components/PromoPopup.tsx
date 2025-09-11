@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 const IMAGE_SRC = '/promo/ubora-event.png' // public/promo/ubora-event.png
-const FORM_URL = 'https://naver.me/xxxxxxxx' // 실제 폼 링크로 교체
+const FORM_URL = 'https://naver.me/xWzI9WyE' // 실제 폼 링크
 const HIDE_KEY = 'promoPopHideUntil'
 const HIDE_MS = 24 * 60 * 60 * 1000
 
