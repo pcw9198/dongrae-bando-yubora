@@ -115,8 +115,10 @@ export default function HomePage() {
             <img
               src="/promo/ubora-event.png"
               alt="역대급 할인 이벤트 - 분양가 1억 할인, 발코니확장 무상"
-              className="block w-[min(88vw,320px)] h-auto"
-              loading="lazy"
+              width={400}
+              height={645}
+              className="block w-[400px] h-[645px] object-cover"
+              loading="eager"
             />
             <div className="flex">
               <button
