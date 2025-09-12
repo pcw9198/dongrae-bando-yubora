@@ -699,7 +699,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">분양 상담 신청</h2>
-            <p className="text-lg mb-8 opacity-90">전문 상담사가 자세한 분양 정보와 혜택을 안내해드립니다</p>
+            <p className="text-lg mb-8 opacity-90">
+              전문 상담사가 자세한 분양 정보와 혜택을 안내해드립니다
+              <br />
+              지금 바로 상담 신청하고 1억 원 할인, 발코니 무료 확장 혜택을 받아보세요!
+            </p>
 
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
               <Card className="bg-card text-card-foreground border border-border text-center p-6">
