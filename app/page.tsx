@@ -186,7 +186,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">단지 개요</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              , 최고의 교통 접근성과 생활 편의시설을 자랑합니다.
+              최고의 교통 접근성과 생활 편의시설을 자랑합니다.
             </p>
           </div>
 
