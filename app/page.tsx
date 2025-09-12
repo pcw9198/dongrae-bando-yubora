@@ -113,12 +113,16 @@ export default function HomePage() {
         <div className="fixed left-4 top-4 z-[60]">
           <div className="rounded-lg bg-background border border-border shadow-lg overflow-hidden">
             <img
-              src="/promo/ubora-event.png"
+              src="/promo/ubora-event.png.png"
               alt="역대급 할인 이벤트 - 분양가 1억 할인, 발코니확장 무상"
-              width={400}
-              height={645}
-              className="block w-[400px] h-[645px] object-cover"
+              width={270}
+              height={450}
+              className="block w-[270px] h-[450px] object-cover"
               loading="eager"
+              onError={(e) => {
+                // fallback when source image is missing or corrupted
+                (e.currentTarget as HTMLImageElement).src = "/placeholder.jpg"
+              }}
             />
             <div className="flex">
               <button
