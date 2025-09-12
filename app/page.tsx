@@ -108,25 +108,27 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Site-entry Promo Popup */}
-      <Dialog open={isPromoOpen} onOpenChange={setIsPromoOpen}>
-        <DialogContent className="w-fit p-0 border-none bg-transparent shadow-none">
-          <div className="flex flex-col items-center">
+      {/* Site-entry Promo Floating Popup (non-blocking, top-left) */}
+      {isPromoOpen && (
+        <div className="fixed left-4 top-4 z-[60]">
+          <div className="rounded-lg bg-background border border-border shadow-lg overflow-hidden">
             <img
               src="/promo/ubora-event.png"
               alt="역대급 할인 이벤트 - 분양가 1억 할인, 발코니확장 무상"
-              className="w-[88vw] max-w-[320px] h-auto"
+              className="block w-[min(88vw,320px)] h-auto"
               loading="lazy"
             />
-            <button
-              className="mt-3 bg-accent text-accent-foreground hover:bg-accent/90 text-sm rounded-md px-3 py-1.5"
-              onClick={() => setIsPromoOpen(false)}
-            >
-              닫기
-            </button>
+            <div className="flex">
+              <button
+                className="flex-1 text-xs py-2 border-t border-border hover:bg-muted"
+                onClick={() => setIsPromoOpen(false)}
+              >
+                닫기
+              </button>
+            </div>
           </div>
-        </DialogContent>
-      </Dialog>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="relative h-[70vh] bg-gradient-to-r from-primary/90 to-primary/70 flex items-center justify-center text-center text-primary-foreground">
