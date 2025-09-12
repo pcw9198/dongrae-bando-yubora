@@ -26,6 +26,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <link rel="icon" href="/placeholder-logo.png" sizes="32x32" />
+        <link rel="icon" type="image/svg+xml" href="/placeholder-logo.svg" />
+        <link rel="apple-touch-icon" href="/placeholder-logo.png" />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17476156908" />
         <Script id="gtag-init" strategy="afterInteractive">
           {`
