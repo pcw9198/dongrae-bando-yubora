@@ -115,12 +115,9 @@ export default function HomePage() {
             <img
               src="/promo/ubora-event.png.png"
               alt="역대급 할인 이벤트 - 분양가 1억 할인, 발코니확장 무상"
-              width={270}
-              height={450}
-              className="block w-[270px] h-[450px] object-cover"
+              className="block w-[270px] max-w-[90vw] h-auto max-h-[80vh] object-contain"
               loading="eager"
               onError={(e) => {
-                // fallback when source image is missing or corrupted
                 (e.currentTarget as HTMLImageElement).src = "/placeholder.jpg"
               }}
             />
