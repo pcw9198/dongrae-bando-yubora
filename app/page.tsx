@@ -112,15 +112,22 @@ export default function HomePage() {
       {isPromoOpen && (
         <div className="fixed left-4 top-4 z-[60]">
           <div className="rounded-lg bg-background border border-border shadow-lg overflow-hidden">
-            <img
-              src="/promo/ubora-event.png.png"
-              alt="역대급 할인 이벤트 - 분양가 1억 할인, 발코니확장 무상"
-              className="block w-[270px] max-w-[90vw] h-auto max-h-[80vh] object-contain"
-              loading="eager"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = "/placeholder.jpg"
-              }}
-            />
+            <a
+              href="https://naver.me/xWzI9WyE"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="방문예약 페이지로 이동"
+            >
+              <img
+                src="/promo/ubora-event.png.png"
+                alt="역대급 할인 이벤트 - 분양가 1억 할인, 발코니확장 무상"
+                className="block w-[270px] max-w-[90vw] h-auto max-h-[80vh] object-contain"
+                loading="eager"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = "/placeholder.jpg"
+                }}
+              />
+            </a>
             <div className="flex">
               <button
                 className="flex-1 text-xs py-2 border-t border-border hover:bg-muted"
