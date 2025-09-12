@@ -18,7 +18,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -28,6 +28,11 @@ export default function HomePage() {
   const [isOverviewOpen, setIsOverviewOpen] = useState(false)
   const FEATURE_MOBILE_CAROUSEL = process.env.NEXT_PUBLIC_FEATURE_MOBILE_CAROUSEL === "true"
   const [isLocationOpen, setIsLocationOpen] = useState(false)
+  const [isPromoOpen, setIsPromoOpen] = useState(true)
+
+  useEffect(() => {
+    setIsPromoOpen(true)
+  }, [])
 
   const unitAImages = [
     { src: "/84a-living-room.png", title: "거실", description: "넓고 밝은 거실 공간" },
@@ -102,6 +107,26 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* Site-entry Promo Popup */}
+      <Dialog open={isPromoOpen} onOpenChange={setIsPromoOpen}>
+        <DialogContent className="w-fit p-0 border-none bg-transparent shadow-none">
+          <div className="flex flex-col items-center">
+            <img
+              src="/promo/ubora-event.png"
+              alt="역대급 할인 이벤트 - 분양가 1억 할인, 발코니확장 무상"
+              className="w-[88vw] max-w-[320px] h-auto"
+              loading="lazy"
+            />
+            <button
+              className="mt-3 bg-accent text-accent-foreground hover:bg-accent/90 text-sm rounded-md px-3 py-1.5"
+              onClick={() => setIsPromoOpen(false)}
+            >
+              닫기
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Hero Section */}
       <section className="relative h-[70vh] bg-gradient-to-r from-primary/90 to-primary/70 flex items-center justify-center text-center text-primary-foreground">
