@@ -115,6 +115,9 @@ export default function HomePage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <Badge className="mb-4 bg-accent text-accent-foreground text-lg px-4 py-2">프리미엄 분양</Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">동래 반도 유보라</h1>
+          <p className="text-xl md:text-2xl mb-4 font-semibold opacity-95">
+            역대급 할인혜택!! 분양가 1억 원 할인, 발코니 무료 확장
+          </p>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
             <br />
             최고의 입지와 품질을 자랑합니다.
